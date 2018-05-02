@@ -8,8 +8,11 @@ import java.sql.SQLException;
 
 public class AppUserMapper implements RowMapper<AppUser> {
 
-    public static final String BASE_SQL //
-            = "Select u.User_Id, u.User_Name, u.Encryted_Password From App_User u ";
+    public static final String SELECT_SQL //
+            = "SELECT u.User_Id, u.User_Name, u.Encryted_Password FROM App_User u ";
+
+    public static final String INSERT_SQL //
+            = "INSERT INTO APP_USER (USER_NAME, ENCRYTED_PASSWORD) ";
 
     @Override
     public AppUser mapRow(ResultSet rs, int rowNum) throws SQLException {
